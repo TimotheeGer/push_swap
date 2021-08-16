@@ -6,20 +6,20 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 17:05:40 by tigerber          #+#    #+#             */
-/*   Updated: 2021/08/14 18:33:21 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/08/16 13:42:10 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void    ft_small_sort(t_data *d)
+void	ft_small_sort(t_data *d)
 {
 	if (ft_count_lst(d->pile_a) == 2)
 		function_sa(d);
 	if (ft_count_lst(d->pile_a) == 3)
 		small_sort_three(d);
 	if (ft_count_lst(d->pile_a) == 4)
-		small_sort_four(d);    
+		small_sort_four(d);
 }
 
 void	small_sort_three(t_data *d)
@@ -75,13 +75,13 @@ void	small_sort_four(t_data *data)
 		function_ra(data);
 	}
 	else if (d < c)
-	    small_sort_four_bis(data);
+		small_sort_four_bis(data);
 }
 
-void    small_sort_four_bis(t_data *data)
+void	small_sort_four_bis(t_data *data)
 {
 	function_rra(data);
 	function_pa(data);
 	function_ra(data);
-	function_ra(data); 
+	function_ra(data);
 }

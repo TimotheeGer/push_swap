@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 18:40:45 by tigerber          #+#    #+#             */
-/*   Updated: 2021/08/14 18:42:05 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/08/16 15:12:11 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,17 @@ void	ft_sort_int_tab(int *tab, int size)
 	}
 }
 
-void		ft_sort_tab_one_hundred(t_data *d, t_list_pile *lst)
+void	ft_sort_tab_one_hundred(t_data *d, t_list_pile *lst)
 {
 	t_list_pile	*tmp;
 	int			j;
-	int 		*tab;
+	int			*tab;
 
 	tmp = lst;
 	j = 0;
-    tab = malloc(sizeof(int) * ft_count_lst(lst));
-    if (tab == NULL)
-        exit (0);
+	tab = malloc(sizeof(int) * ft_count_lst(lst));
+	if (tab == NULL)
+		return ;
 	if (!lst)
 		return ;
 	while (tmp)
@@ -62,22 +62,23 @@ void		ft_sort_tab_one_hundred(t_data *d, t_list_pile *lst)
 		j++;
 	}
 	ft_sort_int_tab(tab, ft_count_lst(lst));
-	d->number = tab[19];
-    d->nb_max = tab[ft_count_lst(lst) - 1];
-    free(tab);
+	if (ft_count_lst(lst) > 19)
+		d->number = tab[19];
+	d->nb_max = tab[ft_count_lst(lst) - 1];
+	free(tab);
 }
 
-void		ft_sort_tab_five_hundred(t_data *d, t_list_pile *lst)
+void	ft_sort_tab_five_hundred(t_data *d, t_list_pile *lst)
 {
 	t_list_pile	*tmp;
 	int			j;
-	int 		*tab;
+	int			*tab;
 
 	tmp = lst;
 	j = 0;
-    tab = malloc(sizeof(int) * ft_count_lst(lst));
-    if (tab == NULL)
-        exit (0);
+	tab = malloc(sizeof(int) * ft_count_lst(lst));
+	if (tab == NULL)
+		return ;
 	if (!lst)
 		return ;
 	while (tmp)
@@ -87,22 +88,23 @@ void		ft_sort_tab_five_hundred(t_data *d, t_list_pile *lst)
 		j++;
 	}
 	ft_sort_int_tab(tab, ft_count_lst(lst));
-	d->number = tab[49];
-    d->nb_max = tab[ft_count_lst(lst) - 1];
-    free(tab);
+	if (ft_count_lst(lst) > 49)
+		d->number = tab[49];
+	d->nb_max = tab[ft_count_lst(lst) - 1];
+	free(tab);
 }
 
-void		ft_sort_tab_other(t_data *d, t_list_pile *lst)
+void	ft_sort_tab_other(t_data *d, t_list_pile *lst)
 {
 	t_list_pile	*tmp;
 	int			j;
-	int 		*tab;
+	int			*tab;
 
 	tmp = lst;
 	j = 0;
-    tab = malloc(sizeof(int) * ft_count_lst(lst));
-    if (tab == NULL)
-        exit (0);
+	tab = malloc(sizeof(int) * ft_count_lst(lst));
+	if (tab == NULL)
+		exit (0);
 	if (!lst)
 		return ;
 	while (tmp)
@@ -113,6 +115,6 @@ void		ft_sort_tab_other(t_data *d, t_list_pile *lst)
 	}
 	ft_sort_int_tab(tab, ft_count_lst(lst));
 	d->middle = tab[ft_count_lst(lst) / 2];
-    d->nb_max = tab[ft_count_lst(lst) - 1];
-    free(tab);
+	d->nb_max = tab[ft_count_lst(lst) - 1];
+	free(tab);
 }

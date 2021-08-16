@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 15:58:06 by tigerber          #+#    #+#             */
-/*   Updated: 2021/08/14 18:41:57 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/08/16 14:55:37 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	*ft_memset(void *ptr, int c, size_t len)
 	}
 	return (ptr);
 }
-
 
 int	ft_count_lst(t_list_pile *lst)
 {

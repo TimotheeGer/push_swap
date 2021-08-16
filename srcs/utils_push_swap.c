@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 18:48:12 by tigerber          #+#    #+#             */
-/*   Updated: 2021/08/14 18:17:40 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/08/16 14:58:31 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	check_max(t_data *d)
 
 void	check_middle(t_data *d)
 {
-	t_list_pile *tmp;
+	t_list_pile	*tmp;
 
 	tmp = d->pile_a;
 	while (tmp)
@@ -108,7 +108,6 @@ void	compare(t_data *d)
 	function_pb(d);
 	d->i = 0;
 	d->j = 0;
-	
 }
 
 void	compare_max(t_data *d)

@@ -6,7 +6,7 @@
 /*   By: tigerber <tigerber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/12 15:49:27 by tigerber          #+#    #+#             */
-/*   Updated: 2021/08/14 18:19:55 by tigerber         ###   ########.fr       */
+/*   Updated: 2021/08/16 14:57:41 by tigerber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,17 +66,21 @@ void	ft_lstadd_front(t_list_pile **alst, t_list_pile *new)
 	*alst = new;
 }
 
-void 	ft_rev_lst(t_list_pile **head_ref)
+void	ft_rev_lst(t_list_pile **head_ref)
 {
-    t_list_pile		*prev = NULL;
-    t_list_pile		*current = *head_ref;
-    t_list_pile		*next = NULL;
-    while (current != NULL)
+	t_list_pile	*prev;
+	t_list_pile	*current;
+	t_list_pile	*next;
+
+	prev = NULL;
+	current = *head_ref;
+	next = NULL;
+	while (current != NULL)
 	{
-        next = current->next;
-        current->next = prev;
-        prev = current;
-        current = next;
-    }
-    *head_ref = prev;
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*head_ref = prev;
 }
